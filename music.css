@@ -1,0 +1,157 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: grid;
+    /* place-items: center; */
+    place-items: center;
+
+}
+.music_container{
+    width: 26rem;
+    height: 38rem;
+    background-color: #ffff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0,0.2 );
+    padding: 1rem;
+    text-align: center;
+  
+}
+
+.music_container #title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.music_container #artist{
+    color: #cccaca;
+    text-transform:capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.img_container{
+    width: 15rem;
+    height:15rem;
+    margin: auto;
+   
+}
+img{
+    /* make the img object fit and circle */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.music_controls{
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    margin-top: 1rem;
+
+
+}
+.music_controls .fas{
+    color: #1111;
+    font-size: 2rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem  rgba(0,0,0,0.4));
+}
+
+.music_controls .main-button{
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    /* add display flex to center the icons */
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls .fa-solid:hover{
+    color: rgb(155, 154, 154);
+}
+.music_controls .fa-play:hover{
+    background-color: #f6f6f6;
+    color: #111;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+
+/* Add a class to animate */
+.anime{
+    animation: rotateplayer 3s linear infinite
+}
+@keyframes rotateplayer {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* we will add this anime class dynamiccaly when user click on play button */
+
+
+/* Progress style */
+
+.progressbar_container{
+    width:100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top:1rem ;
+}
+
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    transition: width 1s linear;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 4rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0,0.7 );
+}
+
+.progress{
+    /* position: absolute; */
+    top:0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: black;
+
+    transition: all 1s linear;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 4rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0,0.7 );
+}
+
+
+div.progress_duration_meter{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
